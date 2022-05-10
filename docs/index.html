@@ -77,10 +77,15 @@
 
 	$(document).ready(function(){
 
-	$("#loader").fadeOut(2000);
-	$("#img").addClass("img");
-	$("#contact").addClass("contact");
-	typeSentence("NekoUI A Custom interface for your Minecraft Bedrock Edition. This UI contains Anime & Virtual YouTuber ( Hololive ).",document.getElementById("sentence"));
+
+	setTimeout(function(){
+
+		$("#loader").fadeOut(2000);
+		$("#img").addClass("img");
+		$("#contact").addClass("contact");
+		typeSentence("NekoUI A Custom interface for your Minecraft Bedrock Edition. This UI contains Anime & Virtual YouTuber ( Hololive ).",document.getElementById("sentence"));
+		
+	},2000);
 
 	});
 
