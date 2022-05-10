@@ -1,0 +1,184 @@
+
+@font-face{
+	font-family: 'eudoxus';
+	src: url("../eudoxus/Variable/EudoxusSansGX.ttf") format("truetype");
+	src: url("../eudoxus/Variable/EudoxusSansGX.woff") format('woff');
+}
+body{
+	font-family: 'eudoxus';
+	height: 100vh;
+	background-image: url("../img/milky_way.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow-y: hidden;
+	width: 100%;
+}
+
+#loader{
+	position: fixed;
+	z-index: 50;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	background-color: black;
+}
+
+.float-me-up{
+	transition: margin 0.2s ease-in-out;
+}
+
+.float-me-up:hover{
+	margin-top: -10px;
+
+}
+
+.typing-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.glow{
+	box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.5),
+            1px 2px 4px 0px rgba(0,255,255,0.5),
+            2px 4px 8px 0px rgba(0,255,255,0.5),
+            2px 4px 16px 0px rgba(0,255,255,0.5);
+}
+.contact{
+		background-color: transparent;
+		position: relative;
+		bottom: 0;
+		margin-bottom: 10px;
+		animation: contacts 1s ease-in-out;
+		animation-fill-mode: forwards;
+		--webkit-animation-fill-mode: forwards;
+}
+
+
+.scrollable{
+	overflow-y: auto;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	height: 100vh;
+}
+.scrollable::-webkit-scrollbar{
+	display: none;
+}
+
+#sentence{
+	color: white;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px black;
+}
+
+.hor-scroll{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	overflow-y: hidden;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.hor-scroll::-webkit-scrollbar{
+	display: none;
+}
+
+@media screen and (min-width:  768px){
+	.bg-content{
+		position: absolute;
+		width: 50%;
+		top: -20%;
+	}
+	.img{
+		filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.3));
+		width: 60%;
+		animation: img_down 2.5s ease, fade_in 2s ease;
+		animation-fill-mode: forwards;
+		--webkit-animation-fill-mode: forwards;
+		position: relative;
+	}
+
+	.btn-data{
+		color: white !important;
+	}
+
+	.inside-btn{
+		width: 15vh;
+	}
+	.bg-image{
+		position: relative;
+		/*background-image: url("https://picsum.photos/1366/768/?blur");*/
+		background-image: url("../img/wave_transparent_top.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+		background-size: cover;
+		height: 100%;
+/*		filter: blur(5px);
+		--webkit-filter: blur(5px);*/
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.bg-content{
+		position: absolute;
+		width: 100%;
+		top: -10%;
+	}
+ 	.img{
+		filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.3));
+		width: 100%;
+		animation: img_down 2.5s ease, fade_in 2s ease;
+		animation-fill-mode: forwards;
+		--webkit-animation-fill-mode: forwards;
+		position: relative;
+	}
+	.btn-data{
+		margin: 6px;
+		margin-bottom: 16px;
+
+	}
+	.inside-btn{
+		width: 15vh;
+	}
+	.bg-image{
+		position: relative;
+		/*background-image: url("https://picsum.photos/1366/768/?blur");*/
+		background-image: url("../img/wave2_transparent_bottom.svg");
+		background-repeat: no-repeat;
+		background-position: bottom;
+		background-attachment: fixed;
+		background-size: cover;
+		height: 100%;
+	/*	filter: blur(5px);
+		--webkit-filter: blur(5px);*/
+	}
+
+
+}
+
+@keyframes contacts{
+	from{
+		bottom: -100px;
+	}
+	to{
+		bottom: 50px;
+	}
+}
+
+@keyframes fade_in{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes img_down{
+	from{top: -150px;}
+	to{top: 40px;}
+}
